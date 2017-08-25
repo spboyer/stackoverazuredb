@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "questionDocument",
+      "databaseName": "questionDatabase",
+      "collectionName": "Questions",
+      "createIfNotExists": true,
+      "connection": "stackoverazuredb_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
